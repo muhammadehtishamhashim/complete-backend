@@ -1,0 +1,15 @@
+{
+  "name": "purebackend",
+  "version": "1.0.0",
+  "description": "The real engineering lore begins.",
+  "keywords": [
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "Muhammad Ehtisham Hashim",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
