@@ -1,24 +1,28 @@
-import  mongoose from "mongoose";
+import mongoose from "mongoose";
 
-const todoSchema = new mongoose.Schema({
+const todoSchema = new mongoose.Schema(
+  {
     content: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     complete: {
-        type: String,
-        required: true,
-        default: false
+      type: String,
+      required: true,
+      default: false,
     },
     createdBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
-    subTodo: [{
+    subTodo: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "subTodo"
-    }]//Array of subtodo
+        ref: "subTodo",
+      },
+    ], //Array of subtodo
+  },
+  { timestamps: true },
+);
 
-}, {timestamps : true})
-
-export const Todo = mongoose.model("Todo", todoSchema)
+export const Todo = mongoose.model("Todo", todoSchema);
